@@ -45,9 +45,11 @@ public static class ArraysTester
         //for(int i = number; i<= length; i++)
         //{
         //number * length;
-        //}
-        // need to loop to length of list... so as long as length doesnt equal count it continues
+        //create a double variable representing the new mupltiples of number and set it to number (use nextNumber to understand what the new number is).
+        // need to loop to length of list... so while length doesnt equal count it continues.
         // next number of list needs to increase by previous. then add it to list.
+        //convert list to an array
+        //return said array
         double nextNumber = number;
         List<double> results = new List<double>();
         while (results.Count() <= length)
@@ -73,6 +75,11 @@ public static class ArraysTester
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
+        // I need variable to deal with the numbers in the data. 
+        //create a for loop to get the program to iterate through list. set the index to 0 and less than amount.
+        //set the list data to the variable numbers and take the data count and subtract 1 to keep in scope.
+        //use removeAt to remove numbers from list. repeat data.count and subtract 1.
+        // lastly use insert method to insert numbers back into the list in the new order
         int numbers;
         for (int i = 0; i < amount; i++)
         {
