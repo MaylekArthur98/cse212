@@ -46,12 +46,14 @@ public static class ArraysTester
         //{
         //number * length;
         //}
-        double limit = number;
+        // need to loop to length of list... so as long as length doesnt equal count it continues
+        // next number of list needs to increase by previous. then add it to list.
+        double nextNumber = number;
         List<double> results = new List<double>();
         while (results.Count() <= length)
         {
-            results.Add(limit);
-            limit += number;
+            results.Add(nextNumber);
+            nextNumber += number;
         }
         double[] numArray = results.ToArray();
         return numArray; // replace this return statement with your own
@@ -71,6 +73,13 @@ public static class ArraysTester
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
+        int numbers;
+        for (int i = 0; i < amount; i++)
+        {
+            numbers = data[data.Count() - 1];
+            data.RemoveAt(data.Count - 1);
+            data.Insert(0, numbers);
+        }
 
     }
 }
