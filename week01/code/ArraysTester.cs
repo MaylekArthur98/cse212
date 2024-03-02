@@ -1,8 +1,12 @@
-public static class ArraysTester {
+using System.Globalization;
+
+public static class ArraysTester
+{
     /// <summary>
     /// Entry point for the tests
     /// </summary>
-    public static void Run() {
+    public static void Run()
+    {
         // Sample Test Cases (may not be comprehensive)
         Console.WriteLine("\n=========== PROBLEM 1 TESTS ===========");
         double[] multiples = MultiplesOf(7, 5);
@@ -38,10 +42,21 @@ public static class ArraysTester {
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
-
-        return new double[0]; // replace this return statement with your own
+        //for(int i = number; i<= length; i++)
+        //{
+        //number * length;
+        //}
+        double limit = number;
+        List<double> results = new List<double>();
+        while (results.Count() <= length)
+        {
+            results.Add(limit);
+            limit += number;
+        }
+        double[] numArray = results.ToArray();
+        return numArray; // replace this return statement with your own
     }
-    
+
     /// <summary>
     /// Rotate the 'data' to the right by the 'amount'.  For example, if the data is 
     /// <c>&lt;List&gt;{1, 2, 3, 4, 5, 6, 7, 8, 9}</c> and an amount is 3 then the list returned should be 
