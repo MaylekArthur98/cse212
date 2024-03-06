@@ -52,7 +52,7 @@ public static class ArraysTester
         //return said array
         double nextNumber = number;
         List<double> results = new List<double>();
-        while (results.Count() <= length)
+        while (results.Count() <= length - 1)
         {
             results.Add(nextNumber);
             nextNumber += number;
