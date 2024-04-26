@@ -48,8 +48,8 @@ public static class ArraysTester
         //create a double variable representing the new mupltiples of number and set it to number (use nextNumber to understand what the new number is).
         // need to loop to length of list... so while length doesnt equal count it continues.
         // next number of list needs to increase by previous. then add it to list.
-        //convert list to an array
-        //return said array
+        //convert list to an array.
+        //return said array.
         double nextNumber = number;
         List<double> results = new List<double>();
         while (results.Count() <= length - 1)
