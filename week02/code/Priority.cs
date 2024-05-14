@@ -12,11 +12,11 @@
         //scenario: dequeue prints message saying there isn't anything in queue when called.
         Console.WriteLine("Test 1");
         Console.WriteLine(priorityQueue.Dequeue());
-
+        //defects found: none.
 
 
         // Test 2
-        // Scenario: 
+        // Scenario:prints out the queue in the enqueue order
         // Expected Result: 
         Console.WriteLine("Test 2");
         priorityQueue.Enqueue("bob,", 2);
@@ -24,18 +24,18 @@
         priorityQueue.Enqueue("sally", 9);
         priorityQueue.Enqueue("noel", 7);
         Console.WriteLine(priorityQueue);
-        // Defect(s) Found: 
+        // Defect(s) Found: none 
 
         Console.WriteLine("---------");
 
         // Test 3
-        // Scenario: Dequeue removes items from queue and returns highest priority.
+        // Scenario: Dequeue removes items from queue and returns highest priority also picks the highest priority that is first in vs the other one in queue.
         // Expected Result: prints out the highest priority in queue.
         Console.WriteLine("Test 3");
         var highPrio = priorityQueue.Dequeue();
         Console.WriteLine(highPrio);
         // Defect(s) Found: 
-
+        // wouldn't pick the highest prioriy but would pick the last item in queue to print out. 
         Console.WriteLine("---------");
 
         // Add more Test Cases As Needed Below
