@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.Design;
 using System.Security.Cryptography.X509Certificates;
 using System.Text.Json;
 using Microsoft.VisualBasic;
@@ -153,19 +155,20 @@ public static class SetsAndMapsTester
         {
             var fields = line.Split(",");
             var degree = fields[3];
-            var count = 0;
-            if (degrees.ContainsKey(degree))
+            if (!degrees.ContainsKey(degree))
             {
-                count++;
+                degrees[degree] = 1;
             }
-            else if (degrees.ContainsKey(degree))
+            else
             {
-                count = 1;
+                degrees[degree] += 1;
             }
-        }
 
+        }
         return degrees;
     }
+    //bachalors: 61562
+    //Hs degree: 4541
 
     /// <summary>
     /// Determine if 'word1' and 'word2' are anagrams.  An anagram
@@ -188,7 +191,7 @@ public static class SetsAndMapsTester
     /// #############
     private static bool IsAnagram(string word1, string word2)
     {
-        // Todo Problem 3 - ADD YOUR CODE HERE
+
         return false;
     }
 
