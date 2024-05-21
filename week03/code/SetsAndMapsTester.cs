@@ -191,8 +191,27 @@ public static class SetsAndMapsTester
     /// #############
     private static bool IsAnagram(string word1, string word2)
     {
+        char[] charWord1 = word1.Replace(" ", "").ToLower().ToCharArray();
+        char[] charWord2 = word2.Replace(" ", "").ToLower().ToCharArray();
+        Array.Sort(charWord1);
+        Array.Sort(charWord2);
 
-        return false;
+        string newWord1 = new string(charWord1);
+        string newWord2 = new string(charWord2);
+
+        if (newWord1 == newWord2)
+        {
+            return true;
+
+        }
+        else if (newWord1 != newWord2)
+        {
+            return false;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /// <summary>
