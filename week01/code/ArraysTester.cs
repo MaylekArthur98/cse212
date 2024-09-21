@@ -85,7 +85,7 @@ public static class ArraysTester
         {
             numbers = data[data.Count() - 1];
             data.RemoveAt(data.Count - 1);
-            data.Insert(0, numbers);
+
         }
 
     }
