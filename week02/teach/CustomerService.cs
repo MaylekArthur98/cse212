@@ -31,7 +31,7 @@ public class CustomerService
         var cs2 = new CustomerService(3);
         for (int i = 0; i < 5; i++)
         {
-            cs1.AddNewCustomer();
+            cs2.AddNewCustomer();
         }
 
         // Defect(s) Found: 
@@ -82,7 +82,7 @@ public class CustomerService
     private void AddNewCustomer()
     {
         // Verify there is room in the service queue
-        if (_queue.Count > _maxSize)
+        if (_queue.Count >= _maxSize)
         {
             Console.WriteLine("Maximum Number of Customers in Queue.");
             return;
